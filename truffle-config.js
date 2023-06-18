@@ -45,7 +45,7 @@
 // const { MNEMONIC, PROJECT_ID } = process.env;
 
  const HDWalletProvider = require('@truffle/hdwallet-provider');
- const mnemonic = 'light away actress load build  spice disease useless  repair  disease  unfair wheat';
+ const mnemonic = 'light away actress load build spice disease useless repair disease unfair wheat';
 
 module.exports = {
   /**
@@ -85,7 +85,7 @@ module.exports = {
     // Note: It's important to wrap the provider as a function to ensure truffle uses a new provider every time.
      sepolia: {
        provider: () => new HDWalletProvider(mnemonic, `https://mainnet.infura.io/v3/817840b672544d658b7d2e4294a0ca58`),
-       network_id: 11155111, 
+       network_id: '*', 
        confirmations:0,      // Goerli's id
        timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
        skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
